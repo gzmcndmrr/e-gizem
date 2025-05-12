@@ -24,8 +24,10 @@ const SignInScreen = () => {
         onChangeText={setPassword}
         secureTextEntry
       />
-      <AppText style={styles.appName}>Smart E-Commerce</AppText>
-      <AppButton title="Login" onPress={() => navigation.navigate("MainAppBottomTabs")}/>
+      <AppText style={styles.appName}>Forgot Password?</AppText>
+      <AppButton title="Login"
+       backgroundColor={AppColors.pink}
+      onPress={() => navigation.navigate("MainAppBottomTabs")}/>
       <AppButton
         title="Sign Up"
         style={styles.registerButton}
@@ -42,15 +44,16 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     paddingHorizontal: sharedPaddingHorizontal,
+    marginTop:vs(100),
+    width:"100%"
   },
   logo: {
-    height: s(150),
-    width: s(150),
     marginBottom: vs(30),
   },
   appName: {
-    fontSize: s(16),
-    marginBottom: vs(15),
+    fontSize: s(12),
+    margin: vs(24),
+    color:AppColors.pink,
   },
   registerButton: {
     backgroundColor: AppColors.white,

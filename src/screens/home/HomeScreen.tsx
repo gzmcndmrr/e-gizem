@@ -6,12 +6,14 @@ import { AppFonts } from "../../styles/fonts";
 import ProductCard from "../../components/cards/ProductCard";
 import { products } from "../../data/products";
 import { s, vs } from "react-native-size-matters";
+import { AppColors } from "../../styles/colors";
 
 const HomeScreen = () => {
   return (
     <AppSaveView>
       <HomeHeader />
       <FlatList
+        style={styles.container}
         numColumns={2}
         data={products}
         keyExtractor={(item) => item.id.toString()}
@@ -37,4 +39,8 @@ const HomeScreen = () => {
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container:{
+    marginTop:vs(20)
+  }
+});

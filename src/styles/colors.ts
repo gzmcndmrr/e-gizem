@@ -1,6 +1,7 @@
 export const AppColors = {
   primary: "#000",
   white: "#fff",
+  whiteGray: "#f2f2f2",
   black: "#000",
   lightGray: "#f0f0f0",
   background: "#f6f6f6",
@@ -8,5 +9,6 @@ export const AppColors = {
   blueGray: "#E6E8EA",
   medGray: "#939393",
   borderColor: "#ccc",
-  redColor: "red"
+  redColor: "red",
+  pink: "#F83758",
 };

@@ -3,11 +3,14 @@ import React from 'react'
 import { AppColors } from '../../styles/colors'
 import { s, vs } from 'react-native-size-matters'
 import { IMAGES } from '../../constants/images-paths'
+import { MaterialIcons } from '@expo/vector-icons'
 
 const HomeHeader = () => {
   return (
     <View style={styles.container}>
-      <Image source={IMAGES.appLogo} style={styles.logo}/>
+      <MaterialIcons name="menu" size={24} color="black" />
+      <Image source={IMAGES.appLogo} />
+      <Image source={IMAGES.profileIcon}/>
     </View>
   )
 }
@@ -16,14 +19,11 @@ export default HomeHeader
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: AppColors.primary,
+        backgroundColor: AppColors.whiteGray,
+        display:"flex",
+        flexDirection:"row",
         alignItems:"center",
-        justifyContent:"center",
-        paddingBottom: vs(10)
+        justifyContent:"space-between",
+        padding:s(10)
     },
-    logo:{
-        height: vs(40),
-        width: s(40),
-        tintColor: AppColors.white
-    }
 })

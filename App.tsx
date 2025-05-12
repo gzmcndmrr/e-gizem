@@ -1,9 +1,9 @@
 import { ActivityIndicator, StyleSheet} from 'react-native';
 import FlashMessage from 'react-native-flash-message';
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import MainAppStack from './src/navigation/MainAppStack';
 import { useFonts } from 'expo-font';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
 
