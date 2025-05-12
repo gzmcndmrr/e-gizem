@@ -19,7 +19,6 @@ export default HomeHeader
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: AppColors.whiteGray,
         display:"flex",
         flexDirection:"row",
         alignItems:"center",

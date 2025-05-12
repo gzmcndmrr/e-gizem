@@ -1,12 +1,10 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import React from "react";
 import AppSaveView from "../../components/views/AppSaveView";
 import HomeHeader from "../../components/headers/HomeHeader";
-import { AppFonts } from "../../styles/fonts";
 import ProductCard from "../../components/cards/ProductCard";
 import { products } from "../../data/products";
 import { s, vs } from "react-native-size-matters";
-import { AppColors } from "../../styles/colors";
 
 const HomeScreen = () => {
   return (
