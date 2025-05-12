@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
 import React, { FC } from "react";
 import { s, vs } from "react-native-size-matters";
-import { colors } from "../../styles/colors";
+import { AppColors } from "../../styles/colors";
 
 interface AppTextInputProps {
   value: string;
@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
     height: vs(40),
     borderRadius: s(25),
     borderWidth: 1,
-    borderColor: colors.borderColor,
+    borderColor: AppColors.borderColor,
     paddingHorizontal: s(15),
     fontSize: s(16),
-    backgroundColor: colors.white,
+    backgroundColor: AppColors.white,
     width: "100%",
     marginBottom: vs(10),
   },

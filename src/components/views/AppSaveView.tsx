@@ -1,26 +1,37 @@
-import { View, SafeAreaView, StyleSheet, StatusBar } from 'react-native'
-import { colors } from '../../styles/colors';
-import { IS_ANDROID } from '../../constants/constants';
+import {
+  Platform,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  View,
+  ViewStyle,
+} from "react-native";
+import React, { FC, ReactNode } from "react";
+import { AppColors } from "../../styles/colors";
+import { IS_Android } from "../../constants/constants";
 
-export default function AppSaveView({ children, style }: { children: React.ReactNode, style?: any }) {
-  return (
-    <SafeAreaView style={styles.safeArea}>
-        <View style={[styles.container, style]}>
-            {children}
-        </View>
-    </SafeAreaView>
-  )
+interface AppSaveViewProps {
+  children: ReactNode;
+  style?: ViewStyle;
 }
 
-const styles = StyleSheet.create({
+const AppSaveView: FC<AppSaveViewProps> = ({ children, style }) => {
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <View style={[styles.container, style]}>{children}</View>
+    </SafeAreaView>
+  );
+};
 
-    safeArea: {
-        flex: 1,
-        backgroundColor: colors.white,
-        paddingTop: IS_ANDROID ? StatusBar.currentHeight || 0 : 0,
-    },
-    container: {
-        flex: 1,
-        backgroundColor: colors.white,
-    },
+export default AppSaveView;
+
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: AppColors.white,
+    paddingTop: IS_Android ? StatusBar.currentHeight || 0 : 0,
+  },
+  container: {
+    flex: 1,
+  },
 });
